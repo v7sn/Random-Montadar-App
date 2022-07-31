@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+
+	<!-- Header Side -->
+	<header id="header">
+		<div id="header-div">
+			<button id="settings-button"> <i class="fa fa-gear"></i> </button>
+			<div id="search-container">
+				<input id="search-input" type="text" placeholder="بحث">
+				<button id="search-button" data-search-button> <i class="fa fa-eye"></i> </button>
+			</div>
+			<h1 id="title" data-title>المنتظر</h1>
+		</div>
+	</header>
+
+
+	<!-- Settings Side -->
+	<div id="settings-side">
+		<div id="settings-data">
+			<p id="settings-title">بيانات</p>
+
+			<hr>
+
+			<div id="databases-container" databases>
+				<input type="checkbox" id="level-1-4">
+				<label for="level-1-4">مستوى أول الى رابع</label>
+
+				<input type="checkbox" id="level-5-8">
+				<label for="level-5-8">مستوى خامس الى ثامن</label>
+			</div>
+
+			<div id="users-info">
+				<hr>
+				<div id="users-count">
+					<p data-users-count>0</p>
+					<p id="semicolon">:</p>
+					<p>عدد الطلاب</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Students List -->
+	<main id="main" data-users-container></main>
+
+
+	<!-- User Card Creating in Javascript Loop -->
+	<template data-user-template>
+		<div id="card">
+			<div id="card-name-container">
+				<p id="card-name" data-user-name>${user.name}</p>
+				<p id="semicolon">:</p>
+				<p id="card-name-title">الاسم</p>
+			</div>
+			<div id="card-level-container">
+				<p id="card-level" data-user-level>${user.level}</p>
+				<p id="semicolon">:</p>
+				<p id="card-level-title">المستوى</p>
+			</div>
+		</div>
+	</template>
+
+
+	<!-- Random User Container -->
+	<div id="random-user-container" data-user-random-container></div>
+	
+</body>
+</html>
